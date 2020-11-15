@@ -11,5 +11,9 @@ export class LoginForexProviderComponent implements OnInit {
 
   ngOnInit() {
   }
+  onclick(){
+    alert("Logged in!!!");
+    window.location.href = "./fx-dashboard";
+}
 
 }

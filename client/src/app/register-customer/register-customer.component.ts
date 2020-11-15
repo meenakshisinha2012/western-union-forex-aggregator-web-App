@@ -11,5 +11,9 @@ export class RegisterCustomerComponent implements OnInit {
 
   ngOnInit() {
   }
+  onclick(){
+    alert("Registraion Successful!!!");
+    window.location.href = "./login-customer";
+}
 
 }

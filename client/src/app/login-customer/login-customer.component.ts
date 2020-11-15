@@ -11,5 +11,9 @@ export class LoginCustomerComponent implements OnInit {
 
   ngOnInit() {
   }
+  onclick(){
+    alert("Logged in!!!");
+    window.location.href = "./customer-dashboard";
+}
 
 }
