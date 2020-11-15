@@ -1,0 +1,28 @@
+
+.navbar {
+  background: #ffffff;
+}
+.bg-nav {
+  background: #c4c4dd;
+}
+.nav-link {
+    font-size: 20px;
+
+  }
+.container-fluid{
+  background: #393184;
+
+}
+.bar {
+  color: white;
+  background: #393184;
+  padding: 10px 10px;
+}
+.nav a{
+  color: white !important;
+  font-size: 1em !important;
+}
+
+.nav-item > a:hover {
+  color: red;
+}
