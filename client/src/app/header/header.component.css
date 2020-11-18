@@ -13,16 +13,17 @@
   background: #393184;
 
 }
-.bar {
-  color: white;
-  background: #393184;
-  padding: 10px 10px;
-}
+
 .nav a{
   color: white !important;
   font-size: 1em !important;
 }
 
 .nav-item > a:hover {
-  color: red;
+  color: white;
+}
+
+.navbar-light{
+  background: #00B0FF;
+  color: white;
 }
