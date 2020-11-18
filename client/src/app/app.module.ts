@@ -17,6 +17,7 @@ import { OurPredictionPageComponent } from './our-prediction-page/our-prediction
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ForexProviderListComponent } from './home-page/forex-provider-list/forex-provider-list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FooterComponent } from './footer/footer.component';
     HomePageComponent,
     HeaderComponent,
     FooterComponent,
+    ForexProviderListComponent,
   ],
   imports: [
     BrowserModule,

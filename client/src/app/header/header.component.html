@@ -33,14 +33,19 @@
         >
       </li>
       <li class="nav-item mr-4">
-        <a class="nav-link" routerLink="/product" routerLinkActive="active"
-          >Products <span class="sr-only">(current)</span></a
+        <a class="nav-link" routerLink="/our-prediction-page" routerLinkActive="active"
+          >Our Prediction <span class="sr-only">(current)</span></a
         >
       </li>
-      <li class="nav-item mr-4">
-        <a class="nav-link" routerLink="/ourservices" routerLinkActive="active"
-          >Our Services <span class="sr-only">(current)</span></a
-        >
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Login
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/login-customer" routerLinkActive="active">Login as Customer</a>
+          <a class="dropdown-item" routerLink="/login-fx" routerLinkActive="active">Login as Forex Provider</a>
+        </div>
       </li>
 
       <li class="nav-item">
@@ -48,15 +53,7 @@
           class="nav-link"
           routerLink="/emicalculator"
           routerLinkActive="active"
-          >EMI Calculator <span class="sr-only">(current)</span></a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          routerLink="/about-us"
-          routerLinkActive="active"
-          >About Us <span class="sr-only">(current)</span></a
+          >Help & Support <span class="sr-only">(current)</span></a
         >
       </li>
     </ul>
