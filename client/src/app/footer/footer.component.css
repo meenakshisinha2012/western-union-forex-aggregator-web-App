@@ -1,0 +1,14 @@
+.footer {
+  background: #d9d6f3;
+}
+
+.footer-bottom {
+  padding: 10px;
+  color: white;
+  background: #343435;
+}
+
+.footer-company-name{
+  /*font-size: 20px;*/
+  font-weight: lighter;
+}
