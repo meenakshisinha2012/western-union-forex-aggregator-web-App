@@ -1,4 +1,45 @@
 <app-header></app-header>
-<p>home-page works!</p>
-<button class="btn btn-primary">Hii</button>
+<div class="container mt-3">
+    <p>home-page works!</p>
+    <form class="form" action="#">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="amount">Amount</label><br>
+                    <input type="number" name="amount" required>
+                </div>
+                
+
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Currency u have</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>INR</option>
+                      <option>USD</option>
+                      <option>EUR</option>
+                      
+                    </select>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Currency u have</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>USD</option>
+                      <option>EUR</option>
+                      <option>INR</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <br>
+                <input class="btn btn-success"type="button" value="search ">
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- <button class="btn btn-primary">Hii</button> -->
 <app-footer></app-footer>
