@@ -1,0 +1,58 @@
+.buy{
+  text-align: right;
+}
+
+#buyRate,#sellRate {
+  color: #010088;
+  font-weight: bold;
+}
+
+.buySpan{
+  color: #128807;
+}
+.fx-provider-heading{
+  text-align: left;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.fx-dashboard-heading{
+  color: #00B0FF;
+}
+.sellSpan{
+  color: #FF1506;
+}
+.sidenav {
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #2196F3;
+  background-color: white;
+  margin:5px;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 0px; /* Same width as the sidebar + left position in px */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
