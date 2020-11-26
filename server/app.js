@@ -10,6 +10,7 @@ const userRoutes = require("./api/routes/user");
 const fxProviderRoutes = require("./api/routes/fx-provider/fx-auth");
 const customerRoutes = require("./api/routes/customer/customer-auth");
 const ratingRoutes = require("./api/routes/customer/rating");
+const currencyRoutes = require("./api/routes/fx-provider/currency");
 
 mongoose
   .connect(process.env.DATABASE, { useNewUrlParser: true })
@@ -40,5 +41,6 @@ app.use("/user", userRoutes);
 app.use("/fx-provider", fxProviderRoutes);
 app.use("/customer", customerRoutes);
 app.use("/rating", ratingRoutes);
+app.use("/currency", currencyRoutes);
 
 module.exports = app;

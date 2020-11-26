@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 
 const currencySchema = new mongoose.Schema({
-  currency_id: {
-    type: String,
-    required: true,
-    maxlength: 100,
-  },
   currency_from: {
     type: String,
     required: true,
@@ -19,4 +14,4 @@ const currencySchema = new mongoose.Schema({
 });
 
 // TODO : May be prone to error due to "trading-history"
-module.exports = mongoose.model("Currency-Table", currencySchema);
+module.exports = mongoose.model("Currency", currencySchema);
