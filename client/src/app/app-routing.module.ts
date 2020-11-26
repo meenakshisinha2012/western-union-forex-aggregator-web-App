@@ -1,3 +1,4 @@
+import { TradeComponent } from './trade/trade.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -25,8 +26,8 @@ const routes: Routes = [
   { path: 'our-prediction-page', component: OurPredictionPageComponent},
   { path: 'home-page', component: HomePageComponent},
   { path: 'header', component: HeaderComponent},
-  { path: 'footer', component: FooterComponent}
-
+  { path: 'footer', component: FooterComponent},
+  { path: 'trade', component: TradeComponent},
 ];
 
 @NgModule({

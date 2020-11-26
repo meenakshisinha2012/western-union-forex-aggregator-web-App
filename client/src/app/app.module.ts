@@ -18,6 +18,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ForexProviderListComponent } from './home-page/forex-provider-list/forex-provider-list.component';
+import { TradeComponent } from './trade/trade.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ForexProviderListComponent } from './home-page/forex-provider-list/fore
     HeaderComponent,
     FooterComponent,
     ForexProviderListComponent,
+    TradeComponent,
   ],
   imports: [
     BrowserModule,
