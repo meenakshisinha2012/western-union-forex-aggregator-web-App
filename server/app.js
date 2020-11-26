@@ -6,19 +6,19 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-const userRoutes = require('./api/routes/user');
-const fxProviderRoutes = require('./api/routes/fx-provider/fx-auth');
-const customerRoutes = require('./api/routes/customer/customer-auth');
+const userRoutes = require("./api/routes/user");
+const fxProviderRoutes = require("./api/routes/fx-provider/fx-auth");
+const customerRoutes = require("./api/routes/customer/customer-auth");
+const ratingRoutes = require("./api/routes/customer/rating");
 
 mongoose
-  .connect(process.env.DATABASE, 
-  { useNewUrlParser: true })
+  .connect(process.env.DATABASE, { useNewUrlParser: true })
   .then(console.log("DB Connected"));
 
 mongoose.Promise = global.Promise;
 
 app.use(morgan("dev"));
-app.use('/uploads', express.static('uploads'));
+app.use("/uploads", express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -37,7 +37,8 @@ app.use((req, res, next) => {
 
 // Routes which should handle requests
 app.use("/user", userRoutes);
-app.use("/fx-provider",fxProviderRoutes);
-app.use("/customer",customerRoutes);
+app.use("/fx-provider", fxProviderRoutes);
+app.use("/customer", customerRoutes);
+app.use("rating", ratingRoutes);
 
 module.exports = app;
