@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
@@ -6,10 +8,10 @@ const mongoose = require("mongoose");
 
 const userRoutes = require('./api/routes/user');
 
-mongoose.connect("Your Database link goes here", { useNewUrlParser: true });
-// to generate link watch video given in below link
-// https://youtu.be/WDrU305J1yw
-console.log('https://youtu.be/WDrU305J1yw');
+mongoose
+  .connect(process.env.DATABASE, 
+  { useNewUrlParser: true })
+  .then(console.log("DB Connected"));
 
 mongoose.Promise = global.Promise;
 
