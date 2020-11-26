@@ -1,13 +1,8 @@
 const mongoose = require("mongoose");
-const { trim } = require("lodash");
-
+const crypto = require("crypto");
+const uuidv1 = require("uuid/v1");
 const fxProviderSchema = new mongoose.Schema({
-  fx_provider_id: {
-    type: String,
-    required: true,
-    unique: true,
-    maxlength: 20,
-  },
+  
   fx_provider_name: {
     type: String,
     required: true,
@@ -29,9 +24,10 @@ const fxProviderSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  //TODO: how to add arrray 
   fx_exchange_currency:{
-
+    type: Array,
+    default: [],
+    required: true,
   },
   
   // TODO Username & password to be changed according to stds.
@@ -40,12 +36,41 @@ const fxProviderSchema = new mongoose.Schema({
     unique: true,
     required: true,
   },
-  fx_provider_password: {
+  salt:String,
+  encry_password: {
     type: String,
-    unique: true,
     required: true,
   },
 });
+
+
+fxProviderSchema
+  .virtual("password")
+  .set(function (password) {
+    this._password = password;
+    this.salt = uuidv1();
+    this.encry_password = this.securePassword(password);
+  })
+  .get(function () {
+    return this._password;
+  });
+
+  fxProviderSchema.methods = {
+  authenticate: function (plainpassword) {
+    return this.securePassword(plainpassword) === this.encry_password;
+  },
+  securePassword: function (plainpassword) {
+    if (!plainpassword) return "";
+    try {
+      return crypto
+        .createHmac("sha256", this.salt)
+        .update(plainpassword)
+        .digest("hex");
+    } catch (err) {
+      return "";
+    }
+  },
+};
 
 // TODO : May be prone to error due to "fx-provider"
 module.exports = mongoose.model("Fx-Provider", fxProviderSchema);

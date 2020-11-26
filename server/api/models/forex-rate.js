@@ -43,5 +43,5 @@ const fxRateSchema = new mongoose.Schema({
   },
 });
 
-// TODO : May be prone to error due to "fx-rate"
+//TODO May be prone to error due to "fx-rate"
 module.exports = mongoose.model("Fx-Rate", fxRateSchema);

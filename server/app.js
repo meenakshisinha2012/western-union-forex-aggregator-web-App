@@ -7,6 +7,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const userRoutes = require('./api/routes/user');
+const fxProviderRoutes = require('./api/routes/fx-provider/fx-auth');
+const customerRoutes = require('./api/routes/customer/customer-auth');
 
 mongoose
   .connect(process.env.DATABASE, 
@@ -35,20 +37,7 @@ app.use((req, res, next) => {
 
 // Routes which should handle requests
 app.use("/user", userRoutes);
-
-app.use((req, res, next) => {
-  const error = new Error("Not found");
-  error.status = 404;
-  next(error);
-});
-
-app.use((error, req, res, next) => {
-  res.status(error.status || 500);
-  res.json({
-    error: {
-      message: error.message
-    }
-  });
-});
+app.use("/fx-provider",fxProviderRoutes);
+app.use("/customer",customerRoutes);
 
 module.exports = app;
