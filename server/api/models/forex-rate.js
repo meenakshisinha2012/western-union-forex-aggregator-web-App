@@ -4,13 +4,16 @@ const fxRateSchema = new mongoose.Schema({
   fx_provider_id: {
     type: String,
     required: true,
-    unique: true,
-    maxlength: 20,
   },
-  currency_id: {
+  currency_from: {
     type: String,
     required: true,
-    maxlength: 100,
+    maxlength: 3,
+  },
+  currency_to: {
+    type: String,
+    required: true,
+    maxlength: 3,
   },
   buy_rate: {
     type: Number,
@@ -42,5 +45,4 @@ const fxRateSchema = new mongoose.Schema({
   },
 });
 
-//TODO May be prone to error due to "fx-rate"
 module.exports = mongoose.model("Fx-Rate", fxRateSchema);

@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 const fxProviderRoutes = require("./api/routes/fx-provider/fx-auth");
 const customerRoutes = require("./api/routes/customer/customer-auth");
 const ratingRoutes = require("./api/routes/customer/rating");
-const currencyRoutes = require("./api/routes/fx-provider/currency");
+const forexRateRoutes = require("./api/routes/fx-provider/forext-rate");
 
 mongoose
   .connect(process.env.DATABASE, { useNewUrlParser: true })
@@ -39,6 +39,6 @@ app.use((req, res, next) => {
 app.use("/fx-provider", fxProviderRoutes);
 app.use("/customer", customerRoutes);
 app.use("/rating", ratingRoutes);
-app.use("/currency", currencyRoutes);
+app.use("/forex-rate", forexRateRoutes);
 
 module.exports = app;
