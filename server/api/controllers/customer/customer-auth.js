@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-
+//jwt token
 const Customer = require("../../models/customer");
 
 exports.cust_signup = (req, res, next) => {
