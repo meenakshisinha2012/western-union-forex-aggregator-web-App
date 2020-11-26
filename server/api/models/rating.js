@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { trim } = require("lodash");
 
 const ratingSchema = new mongoose.Schema({
   fx_provider_id: {

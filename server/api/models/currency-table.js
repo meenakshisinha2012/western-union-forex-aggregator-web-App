@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { trim } = require("lodash");
 
 const currencySchema = new mongoose.Schema({
   currency_id: {

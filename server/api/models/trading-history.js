@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { trim } = require("lodash");
 
 const tradingHistorySchema = new mongoose.Schema({
   customer_id: {
