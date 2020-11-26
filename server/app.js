@@ -39,6 +39,6 @@ app.use((req, res, next) => {
 app.use("/user", userRoutes);
 app.use("/fx-provider", fxProviderRoutes);
 app.use("/customer", customerRoutes);
-app.use("rating", ratingRoutes);
+app.use("/rating", ratingRoutes);
 
 module.exports = app;
