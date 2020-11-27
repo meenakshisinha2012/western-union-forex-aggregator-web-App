@@ -1,1 +1,104 @@
-<p>trade works!</p>
+
+<app-header></app-header>
+
+<div class="container mt-3">
+    <!-- <p>home-page works!</p> -->
+    <div class="jumbotron" style="height: 500px;">
+        <!-- <p>trade works!</p> -->
+        <h3 class="heading">Checkout</h3>
+        <div class="card bg-light mb-3"style="border-radius: 1%; box-shadow: 10px 10px 5px grey;">
+            <!-- <div class="card-header text-white"style="background-color:#345bcc!important;">Provider Number 2</div> -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col col-lg-3">
+        
+                    <img src="../../../assets/FX1.jpg" alt="">
+        
+                    </div>
+                    <div class="col col-lg-9">
+                       <div class="row">
+                           <h3>Alfa Trader Forex Provider</h3>
+                       </div> 
+                       <form action="form"></form>
+                       <div class="row">
+                           <div class="col col-lg-4">
+                               
+                               <div class="row" >
+                                   <div class="text-muted">Total Amount to trade</div>
+        
+                               </div>
+                               <div class="row">
+                                   <div class="h5"><input style="background-color: lightyellow;"type="number"class="form-control"value="5000"></div>
+                               </div>
+        
+                            </div>
+                            <div class="col col-lg-6">
+                               
+                                <div class="row" >
+                                    <div class="text-muted mr-5">Trading Currency</div> 
+                                    <label class="text-muted mr-5"for="tradetype">Buy</label>
+                                    <label class="text-muted"for="tradetype">Sell</label>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="h5 mr-5">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>USD-INR</option>
+                                            <option>EUR-USD</option>
+                                            <option>INR-EUR</option> 
+                                              
+                                        </select>
+                                    </div>
+                                    <div class="form-check form-check-inline mr-5">
+                                        <!-- <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio1" value="buy"> -->
+                                        <div class="form-check row ">
+                                            <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio1" value="buy">
+                                        </div>
+                                    </div>
+                                    <div class="form-check form-check-inline mr-5">
+                                        <!-- <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio1" value="buy"> -->
+                                        <div class="form-check row ">
+                                            <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio2" value="sell">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+         
+                            </div>
+                            
+                        </div>
+                       <div class="row">
+                        <div class="col col-lg-4">
+                            <div class="row mt-3 ml-5">
+                                <br>
+                                <a class="btn btn-lg btn-primary p2"style="box-shadow: 3px 3px 1px grey;" onclick="clickedTrade"routerLink="/home-page" routerLinkActive="active">Trade Now</a>
+        
+                            </div>
+                        </div>
+                        
+                       
+                       </div>
+        
+                    </div>
+                </div>
+                <!-- <text-muted class="card-title">Info card title</text-muted>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+              </div>
+          </div>
+        
+    </div>
+
+    
+    <!-- <app-forex-provider-list></app-forex-provider-list> -->
+</div>
+
+<app-footer></app-footer>
+
+<script>
+    clickedTrade = Swal.fire(
+                    'Congratulations!',
+                    'Transaction Successful!',
+                    'success'
+                    )
+</script>
+  

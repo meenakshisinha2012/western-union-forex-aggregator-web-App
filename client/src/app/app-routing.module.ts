@@ -12,6 +12,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
+import { TransactionsComponent } from './transactions/transactions.component';
+import { CustomerTransactionsComponent } from './customer-transactions/customer-transactions.component';
 
 
 const routes: Routes = [
@@ -28,6 +30,9 @@ const routes: Routes = [
   { path: 'header', component: HeaderComponent},
   { path: 'footer', component: FooterComponent},
   { path: 'trade', component: TradeComponent},
+  { path: 'transactions', component: TransactionsComponent},
+  { path: 'customer-transactions', component: CustomerTransactionsComponent},
+
 ];
 
 @NgModule({
