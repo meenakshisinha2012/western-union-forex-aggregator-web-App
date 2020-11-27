@@ -71,7 +71,11 @@
                         <div class="col col-lg-4">
                             <div class="row mt-3 ml-5">
                                 <br>
-                                <a class="btn btn-lg btn-primary p2"style="box-shadow: 3px 3px 1px grey;" onclick="clickedTrade"routerLink="/home-page" routerLinkActive="active">Trade Now</a>
+                                <a class="btn btn-lg btn-primary p2"style="box-shadow: 3px 3px 1px grey;" onclick="Swal.fire(
+                                    'Congratulations!',
+                                    'Transaction Successful!',
+                                    'success'
+                                    );"routerLink="/home-page" routerLinkActive="active">Trade Now</a>
         
                             </div>
                         </div>
@@ -95,10 +99,14 @@
 <app-footer></app-footer>
 
 <script>
-    clickedTrade = Swal.fire(
-                    'Congratulations!',
-                    'Transaction Successful!',
-                    'success'
-                    )
+    function clickedTrade(){
+            Swal.fire(
+                'Congratulations!',
+                'Transaction Successful!',
+                'success'
+                )
+  
+       
+    }
 </script>
   
