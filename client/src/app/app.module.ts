@@ -21,6 +21,8 @@ import { ForexProviderListComponent } from './home-page/forex-provider-list/fore
 import { TradeComponent } from './trade/trade.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { CustomerTransactionsComponent } from './customer-transactions/customer-transactions.component';
+import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+import { FxProfileComponent } from './fx-profile/fx-profile.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { CustomerTransactionsComponent } from './customer-transactions/customer-
     TradeComponent,
     TransactionsComponent,
     CustomerTransactionsComponent,
+    CustomerProfileComponent,
+    FxProfileComponent,
   ],
   imports: [
     BrowserModule,

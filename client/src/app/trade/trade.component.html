@@ -1,4 +1,3 @@
-
 <app-header></app-header>
 
 <div class="container mt-3">
@@ -12,76 +11,80 @@
                 <div class="row">
                     <div class="col col-lg-3">
         
-                    <img src="../../../assets/FX1.jpg" alt="">
+                        <img src="../../../assets/FX1.jpg" alt="">
         
                     </div>
                     <div class="col col-lg-9">
                        <div class="row">
                            <h3>Alfa Trader Forex Provider</h3>
                        </div> 
-                       <form action="form"></form>
-                       <div class="row">
-                           <div class="col col-lg-4">
-                               
-                               <div class="row" >
-                                   <div class="text-muted">Total Amount to trade</div>
-        
-                               </div>
-                               <div class="row">
-                                   <div class="h5"><input style="background-color: lightyellow;"type="number"class="form-control"value="5000"></div>
-                               </div>
-        
-                            </div>
-                            <div class="col col-lg-6">
-                               
-                                <div class="row" >
-                                    <div class="text-muted mr-5">Trading Currency</div> 
-                                    <label class="text-muted mr-5"for="tradetype">Buy</label>
-                                    <label class="text-muted"for="tradetype">Sell</label>
+                       <form method="POST" action="/customer-dashboard" >
+                            <div class="row">
+                                <div class="col col-lg-4">
                                     
+                                    <div class="row" >
+                                        <div class="text-muted">Total Amount to trade</div>
+            
+                                    </div>
+                                    <div class="row">
+                                        <div class="h5"><input style="background-color: lightyellow;"type="number"class="form-control"value="5000"></div>
+                                    </div>
+            
                                 </div>
-                                <div class="row">
-                                    <div class="h5 mr-5">
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>USD-INR</option>
-                                            <option>EUR-USD</option>
-                                            <option>INR-EUR</option> 
-                                              
-                                        </select>
+                                <div class="col col-lg-6">
+                                    
+                                    <div class="row" >
+                                        <div class="text-muted mr-5">Trading Currency</div> 
+                                        <label class="text-muted mr-5"for="tradetype">Buy</label>
+                                        <label class="text-muted"for="tradetype">Sell</label>
+                                        
                                     </div>
-                                    <div class="form-check form-check-inline mr-5">
-                                        <!-- <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio1" value="buy"> -->
-                                        <div class="form-check row ">
-                                            <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio1" value="buy">
+                                    <div class="row">
+                                        <div class="h5 mr-5">
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>USD-INR</option>
+                                                <option>EUR-USD</option>
+                                                <option>INR-EUR</option> 
+                                                
+                                            </select>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-5">
+                                            <!-- <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio1" value="buy"> -->
+                                            <div class="form-check row ">
+                                                <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio1" value="buy" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-5">
+                                            <!-- <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio1" value="buy"> -->
+                                            <div class="form-check row ">
+                                                <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio2" value="sell" required>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-check form-check-inline mr-5">
-                                        <!-- <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio1" value="buy"> -->
-                                        <div class="form-check row ">
-                                            <input class="form-check-input" type="radio" name="tradetype" id="inlineRadio2" value="sell">
-                                        </div>
+                                    
+            
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col col-lg-4">
+                                    <div class="row mt-3 ml-5">
+                                        <br>
+                                        <a class="btn btn-lg btn-primary p2"style="box-shadow: 3px 3px 1px grey;" 
+                                            onclick="Swal.fire(
+                                                'Congratulations!',
+                                                'Transaction Successful!',
+                                                'success'
+                                                ); "
+                                             routerLink="/customer-dashboard">Trade Now</a>
+                
                                     </div>
                                 </div>
                                 
-         
-                            </div>
                             
-                        </div>
-                       <div class="row">
-                        <div class="col col-lg-4">
-                            <div class="row mt-3 ml-5">
-                                <br>
-                                <a class="btn btn-lg btn-primary p2"style="box-shadow: 3px 3px 1px grey;" onclick="Swal.fire(
-                                    'Congratulations!',
-                                    'Transaction Successful!',
-                                    'success'
-                                    );"routerLink="/home-page" routerLinkActive="active">Trade Now</a>
-        
                             </div>
-                        </div>
-                        
+                       </form>
                        
-                       </div>
         
                     </div>
                 </div>
@@ -98,15 +101,5 @@
 
 <app-footer></app-footer>
 
-<script>
-    function clickedTrade(){
-            Swal.fire(
-                'Congratulations!',
-                'Transaction Successful!',
-                'success'
-                )
-  
-       
-    }
-</script>
+
   

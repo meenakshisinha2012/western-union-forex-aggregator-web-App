@@ -14,6 +14,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { CustomerTransactionsComponent } from './customer-transactions/customer-transactions.component';
+import { FxProfileComponent } from './fx-profile/fx-profile.component';
+import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 
 
 const routes: Routes = [
@@ -32,6 +34,8 @@ const routes: Routes = [
   { path: 'trade', component: TradeComponent},
   { path: 'transactions', component: TransactionsComponent},
   { path: 'customer-transactions', component: CustomerTransactionsComponent},
+  { path: 'fx-profile', component: FxProfileComponent},
+  { path: 'customer-profile', component: CustomerProfileComponent},
 
 ];
 
