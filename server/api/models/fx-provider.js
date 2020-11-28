@@ -26,7 +26,8 @@ const fxProviderSchema = new mongoose.Schema({
   },
   fx_identification_no:{
     type: String,
-    required: true
+    required: true,
+    unique:true
   },
   fx_provider_username: {
     type: String,
