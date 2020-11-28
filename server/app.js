@@ -10,6 +10,7 @@ const fxProviderRoutes = require("./api/routes/fx-provider/fx-auth");
 const customerRoutes = require("./api/routes/customer/customer-auth");
 const ratingRoutes = require("./api/routes/customer/rating");
 const forexRateRoutes = require("./api/routes/fx-provider/forext-rate");
+// const ourRecomenRoutes = require("./api/routes/customer/our-recommendation");
 
 const tradeHistoryRoutes = require("./api/routes/trade-history");
 //const idNoListRoutes = require("./api/routes/identificationNo");
@@ -44,7 +45,7 @@ app.use("/customer", customerRoutes);
 app.use("/rating", ratingRoutes);
 app.use("/forex-rate", forexRateRoutes);
 app.use("/trade-history", tradeHistoryRoutes);
-//app.use("/fx-id-no", idNoListRoutes);
+// app.use("/our-recomen", ourRecomenRoutes);
 
 
 module.exports = app;

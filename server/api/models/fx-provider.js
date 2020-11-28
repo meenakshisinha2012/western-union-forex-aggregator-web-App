@@ -29,8 +29,10 @@ const fxProviderSchema = new mongoose.Schema({
     default: [],
     required: true,
   },
-  
-  // TODO Username & password to be changed according to stds.
+  fx_identification_no:{
+    type: String,
+    required: true
+  },
   fx_provider_username: {
     type: String,
     unique: true,

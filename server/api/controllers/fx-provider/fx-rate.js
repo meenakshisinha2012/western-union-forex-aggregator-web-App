@@ -33,7 +33,7 @@ exports.getFxProvider = (req, res, next) => {
       
       for (i = 0; i < result.length; i++) {
         console.log(i, result[i]);
-        forexRate
+        forexRate 
           .find({ fx_provider_id: result[i] })
           .sort(mysort)
           .limit(1)
