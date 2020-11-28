@@ -1,0 +1,104 @@
+{
+	"fx_provider_name":"CMC Markets",
+   	"fx_provider_company_name":"CMC",
+   	"fx_provider_email_address":"cmcmarkets@gmail.com",
+    	"fx_brokrage_rate":0.8,
+    	"fx_exchange_currency":[
+		
+        	{
+            		"currency_from":"USD",
+            		"currency_to":"INR"
+        	},
+        	{
+            		"currency_from":"EUR",
+            		"currency_to":"USD"
+        	},
+        	{
+            		"currency_from":"USD",
+            		"currency_to":"EUR"
+        	}
+        ],
+	"fx_identification_no": "5fc0e66ddff595315c309372",
+	"forex_rate" : [
+		{	
+			"currency_from":"USD",
+    			"currency_to":"INR",
+    			"buy_rate":73.83,
+    			"average_buy_rate": 73.83,
+    			"per_change_buy_rate": 0,
+    			"sell_rate": 73.832,
+    			"average_sell_rate": 73.832,
+    			"per_change_sell_rate": 0,
+    			"timestamp":"2020-11-26T05:00:00"
+		},
+		{	
+			"currency_from":"USD",
+    			"currency_to":"INR",
+    			"buy_rate":73.919,
+    			"average_buy_rate": 73.874,
+    			"per_change_buy_rate": 0.12,
+    			"sell_rate": 73.977,
+    			"average_sell_rate": 73.9045,
+    			"per_change_sell_rate": 0.19 ,
+    			"timestamp":"2020-11-26T08:00:00"
+		},
+		{	
+			"currency_from":"EUR",
+    			"currency_to":"USD",
+    			"buy_rate":1.193,
+    			"average_buy_rate": 1.1,
+    			"per_change_buy_rate": 0,
+    			"sell_rate": 1.193,
+    			"average_sell_rate": 1.193,
+    			"per_change_sell_rate": 0,
+    			"timestamp":"2020-11-26T06:00:00"
+		},
+		{	
+			"currency_from":"EUR",
+    			"currency_to":"USD",
+    			"buy_rate":1.1885,
+    			"average_buy_rate": 1.1,
+    			"per_change_buy_rate": 0.17,
+    			"sell_rate": 1.1901,
+    			"average_sell_rate": 1.1916,
+    			"per_change_sell_rate": -0.14,
+    			"timestamp":"2020-11-26T12:30:00"
+		},
+		{	
+			"currency_from":"EUR",
+    			"currency_to":"USD",
+    			"buy_rate":1.1901,
+    			"average_buy_rate": 1.1905,
+    			"per_change_buy_rate": 0.09,
+    			"sell_rate": 1.1906,
+    			"average_sell_rate": 1.19123,
+    			"per_change_sell_rate":0.06 ,
+    			"timestamp":"2020-11-26T03:30:00"
+		},
+		{	
+			"currency_from":"USD",
+    			"currency_to":"EUR",
+    			"buy_rate":0.84,
+    			"average_buy_rate": 0.84,
+    			"per_change_buy_rate": 0,
+    			"sell_rate": 0.82,
+    			"average_sell_rate": 0.82,
+    			"per_change_sell_rate":0 ,
+    			"timestamp":"2020-11-26T03:30:00"
+		},
+		{	
+			"currency_from":"USD",
+    			"currency_to":"EUR",
+    			"buy_rate":0.8392,
+    			"average_buy_rate": 0.8396,
+    			"per_change_buy_rate": 0.0952,
+    			"sell_rate": 0.8302,
+    			"average_sell_rate": 0.8251,
+    			"per_change_sell_rate":1.24 ,
+    			"timestamp":"2020-11-26T03:30:00"
+		}
+	],
+    	"fx_provider_username": "cmcMarkets",
+    	"password": "27198" 
+    	
+}
