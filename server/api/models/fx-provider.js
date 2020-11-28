@@ -20,10 +20,6 @@ const fxProviderSchema = new mongoose.Schema({
     required: true,
     maxlength: 500,
   },
-  fx_brokrage_rate: {
-    type: Number,
-    required: true,
-  },
   fx_exchange_currency:{
     type: Array,
     default: [],
