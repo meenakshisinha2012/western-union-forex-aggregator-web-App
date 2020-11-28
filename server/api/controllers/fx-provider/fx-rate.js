@@ -11,7 +11,7 @@ exports.add_fx_rate = (req, res, next) => {
       });
     }
     res.json({
-      msg: "Fx-rate added successfully",
+      errormsg: "Fx-rate added successfully",err
     });
   });
 };
@@ -68,7 +68,7 @@ exports.getFxProviderRates = (req, res, next) => {
     })
     .catch((err) => {
       console.log("Cannot find fx-providers", err);
-      res.status(500).json(err);
+      res.status(500).json({errormsg:"Cannot find fx-providers",err});
     });
 };
 
@@ -88,7 +88,7 @@ exports.getFxProviderFilterBuyRateDesc = (req, res, next) => {
     })
     .catch((err) => {
       console.log("Cannot find fx-providers", err);
-      res.status(500).json(err);
+      res.status(500).json({errmsg:"Cannot find fx-providers",err});
     });
 };
 

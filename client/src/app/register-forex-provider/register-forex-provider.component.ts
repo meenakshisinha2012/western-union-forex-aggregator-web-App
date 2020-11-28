@@ -10,26 +10,23 @@ import { AuthServiceService } from '../services/auth-service.service';
 })
 export class RegisterForexProviderComponent implements OnInit {
   registerFxData = {}
-  constructor(private _auth:AuthServiceService, private _router: Router) { }
+  constructor(private _auth: AuthServiceService, private _router: Router) { }
 
   ngOnInit() {
   }
 
   registerFxProvider() {
 
-    console.log('Gota click' );
+    console.log('Gota click');
     this._auth.registerFxProvider(this.registerFxData).subscribe(res => {
-
       console.log('Res', res);
       localStorage.setItem('token', res.token);
       alert("Registration Successfull");
       this._router.navigate(['/fx-dashboard'])
-    }),
+    }, err => {
+      alert(err.error.errormsg);
+      console.log(err);
+    })
 
-
-      err =>{
-        
-        console.log(err);
-      }
   }
 }

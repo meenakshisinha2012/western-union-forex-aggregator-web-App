@@ -15,15 +15,18 @@ export class RegisterCustomerComponent implements OnInit {
   }
   registerCustomer() {
 
-    console.log('Gota click' );
+    console.log('Gota click');
     this._auth.registerCustomer(this.registerCustomerData).subscribe(res => {
-
       console.log('Res', res);
       localStorage.setItem('token', res.token);
       alert("Registration Successfull");
       this._router.navigate(['/customer-dashboard'])
-    }),
-      err => console.log(err);
+    },
+      err => {
+        alert("Something Went Wrong")
+        console.log(err) }
+    )
+
 
   }
 
