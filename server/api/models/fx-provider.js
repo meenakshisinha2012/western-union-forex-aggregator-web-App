@@ -27,7 +27,6 @@ const fxProviderSchema = new mongoose.Schema({
   fx_exchange_currency:{
     type: Array,
     default: [],
-    required: true,
   },
   fx_identification_no:{
     type: String,
