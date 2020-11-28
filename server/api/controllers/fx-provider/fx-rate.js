@@ -31,7 +31,6 @@ exports.getFxProvider = (req, res, next) => {
       // res.status(200).json(result);
       console.log("IDS:", result);
       
-     
       for (i = 0; i < result.length; i++) {
         console.log(i, result[i]);
         forexRate

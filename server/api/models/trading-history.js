@@ -4,16 +4,19 @@ const tradingHistorySchema = new mongoose.Schema({
   customer_id: {
     type: String,
     required: true,
-    unique: true,
-    maxlength: 20,
+    
   },
   fx_provider_id: {
     type: String,
     required: true,
-    unique: true,
-    maxlength: 20,
+
   },
-  currency_id: {
+  currency_from: {
+    type: String,
+    required: true,
+    maxlength: 100,
+  },
+  currency_to: {
     type: String,
     required: true,
     maxlength: 100,
@@ -26,11 +29,11 @@ const tradingHistorySchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  timestamp: {
+  tradingTimestamp: {
     type: Date,
+    default: Date.now,
     required: true,
   },
 });
 
-// TODO : May be prone to error due to "trading-history"
 module.exports = mongoose.model("Trading-History", tradingHistorySchema);
