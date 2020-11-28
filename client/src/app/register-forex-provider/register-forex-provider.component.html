@@ -75,6 +75,7 @@
           <input
             class="input100"
             type="text"
+            [(ngModel)]="registerFxData.fx_provider_name"
             name="fx-name"
             placeholder="Name"
           />
@@ -90,6 +91,7 @@
           <input
             class="input100"
             type="text"
+            [(ngModel)]="registerFxData.fx_provider_company_name"
             name="companyName"
             placeholder="Company Name"
           />
@@ -106,6 +108,7 @@
           <input
             class="input100"
             type="text"
+            [(ngModel)]="registerFxData.fx_identification_no"
             name="idNo"
             placeholder="Identification Number"
           />
@@ -128,6 +131,7 @@
           <input
             class="input100"
             type="text"
+            [(ngModel)]="registerFxData.fx_provider_email_address"
             name="email"
             placeholder="Email"
           />
@@ -144,6 +148,7 @@
           <input
             class="input100"
             type="text"
+            [(ngModel)]="registerFxData.fx_provider_username"
             name="username"
             placeholder="Username"
           />
@@ -160,6 +165,7 @@
           <input
             class="input100"
             type="password"
+            [(ngModel)]="registerFxData.password"
             name="password"
             placeholder="Password"
           />
@@ -170,7 +176,7 @@
         </div>
       </div>
       <div class="container-login100-form-btn">
-        <button class="login100-form-btn" style="width: 20em">Register</button>
+        <button class="login100-form-btn" style="width: 20em" (click)="registerFxProvider()">Register</button>
       </div>
       <a class="txt2" routerLink="/login-fx">
         Already have an FX-account ?<span style="color: blue"> Login Here</span>
