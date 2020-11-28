@@ -9,7 +9,7 @@
   <img
     class="navbar-brand navbar-logo d-block d-md-none"
     src="../../assets/forexfxlogo.png"
-    style="width: 160px; height: 80px;"
+    style="width: 160px; height: 80px"
     alt=""
   />
 
@@ -33,18 +33,38 @@
         >
       </li>
       <li class="nav-item mr-4">
-        <a class="nav-link" routerLink="/our-prediction-page" routerLinkActive="active"
+        <a
+          class="nav-link"
+          routerLink="/our-prediction-page"
+          routerLinkActive="active"
           >Our Prediction <span class="sr-only">(current)</span></a
         >
       </li>
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <li *ngIf="!_auth.isloggedIn()" class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
           Login
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="/login-customer" routerLinkActive="active">Login as Customer</a>
-          <a class="dropdown-item" routerLink="/login-fx" routerLinkActive="active">Login as Forex Provider</a>
+          <a
+            class="dropdown-item"
+            routerLink="/login-customer"
+            routerLinkActive="active"
+            >Login as Customer</a
+          >
+          <a
+            class="dropdown-item"
+            routerLink="/login-fx"
+            routerLinkActive="active"
+            >Login as Forex Provider</a
+          >
         </div>
       </li>
 
@@ -54,6 +74,12 @@
           routerLink="/emicalculator"
           routerLinkActive="active"
           >Help & Support <span class="sr-only">(current)</span></a
+        >
+      </li>
+
+      <li *ngIf="_auth.isloggedIn()" class="nav-item mr-4">
+        <a class="nav-link" routerLinkActive="active" (click)= "_auth.logoutCustomer()"
+          >Logout <span class="sr-only">(current)</span></a
         >
       </li>
     </ul>

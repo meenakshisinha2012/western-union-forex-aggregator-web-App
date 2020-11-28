@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthServiceService } from '../services/auth-service.service';
 
 @Component({
   selector: 'app-login-customer',
@@ -7,13 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginCustomerComponent implements OnInit {
 
-  constructor() { }
+  loginCustomerData = {};
+
+  constructor(private _auth: AuthServiceService, private _router: Router) { }
 
   ngOnInit() {
   }
-  onclick(){
-    alert("Logged in!!!");
-    window.location.href = "./customer-dashboard";
-}
+
+  loginCustomer() {
+    this._auth.loginCustomer(this.loginCustomerData).subscribe(res => {
+      console.log(res)
+      localStorage.setItem('token', res.token)
+      alert('Login Successfull');
+      this._router.navigate(['/customer-dashboard'])
+    }
+    )
+  }
 
 }

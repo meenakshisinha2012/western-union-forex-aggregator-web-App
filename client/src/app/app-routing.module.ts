@@ -10,7 +10,6 @@ import { RegisterCustomerComponent } from './register-customer/register-customer
 import { LoginForexProviderComponent } from './login-forex-provider/login-forex-provider.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { CustomerTransactionsComponent } from './customer-transactions/customer-transactions.component';
@@ -20,11 +19,10 @@ import { CustomerProfileComponent } from './customer-profile/customer-profile.co
 
 const routes: Routes = [
   { path: '', redirectTo: 'home-page', pathMatch: 'full' },
-  { path: 'login', component: LoginFormComponent},
   { path: 'login-fx', component: LoginForexProviderComponent},
   { path: 'login-customer', component: LoginCustomerComponent},
   { path: 'register-customer', component: RegisterCustomerComponent},
-  { path: 'register-fx', component: RegisterForexProviderComponent},
+  { path: 'register-fx', component: RegisterForexProviderComponent}, 
   { path: 'customer-dashboard', component: CustomerDashboardComponent},
   { path: 'fx-dashboard', component: FxDashboardComponent},
   { path: 'our-prediction-page', component: OurPredictionPageComponent},
