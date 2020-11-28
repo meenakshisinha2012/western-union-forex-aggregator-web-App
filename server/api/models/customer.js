@@ -9,10 +9,6 @@ const customerSchema = new mongoose.Schema({
     required: true,
     maxlength: 100,
   },
-  customer_country_name:{
-    type: String,
-    required: true,
-  },
   customer_email_address: {
     type: String,
     unique: true,
