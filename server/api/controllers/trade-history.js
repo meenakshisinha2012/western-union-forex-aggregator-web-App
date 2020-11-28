@@ -36,3 +36,37 @@ exports.getAllTradeHistory = (req, res, next) => {
     });
 
 };
+
+exports.getCustomerTradeHistory = (req, res, next) => {
+    const customerId = req.params.customerId;
+    TradeHistory.find({customer_id : customerId})
+    .exec()
+    .then((docs) => {
+      // console.log("All products", docs);
+      res.status(200).json(docs);
+    })
+    .catch((err) => {
+      console.log("Error: Cannot fetch trade history", err);
+      res.status(500).json({
+        error: err,
+      });
+    });
+
+};
+
+exports.getFxTradeHistory = (req, res, next) => {
+    const fxId = req.params.fxId;
+    TradeHistory.find({fx_provider_id : fxId})
+    .exec()
+    .then((docs) => {
+      // console.log("All products", docs);
+      res.status(200).json(docs);
+    })
+    .catch((err) => {
+      console.log("Error: Cannot fetch trade history", err);
+      res.status(500).json({
+        error: err,
+      });
+    });
+
+};
