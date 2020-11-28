@@ -1,9 +1,12 @@
 //const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const forexRate = require("../../models/forex-rate");
+const data = require("../../../uploads/provider1.json");
 
 exports.add_fx_rate = (req, res, next) => {
   const fxRate = new forexRate(req.body);
+  console.log("Data", data);
+
   fxRate.save((err, fxRate) => {
     if (err) {
       return res.status(400).json({
@@ -16,11 +19,19 @@ exports.add_fx_rate = (req, res, next) => {
   });
 };
 
-exports.getFxProvider = (req, res, next) => {
+exports.getFxProvider = async (req, res, next) => {
   const from = req.params.currencyFrom;
   const to = req.params.currencyTo;
   const mysort = { timestamp: -1 };
   let forexProviderRates = [];
+  try {
+    const result1 = await forexRate
+      .find({ currency_from: from, currency_to: to })
+      .distinct("fx_provider_id")
+      .exec();
+  } catch (error) {}
+
+  console.log("result1", result1);
 
   forexRate
     .find({ currency_from: from, currency_to: to })
@@ -30,17 +41,17 @@ exports.getFxProvider = (req, res, next) => {
       // console.log("Forex Provides Found ");
       // res.status(200).json(result);
       console.log("IDS:", result);
-      
+
       for (i = 0; i < result.length; i++) {
         console.log(i, result[i]);
-        forexRate 
+        forexRate
           .find({ fx_provider_id: result[i] })
           .sort(mysort)
           .limit(1)
           .exec()
           .then((docs) => {
-            forexProviderRates.push({docs});
-            console.log("Doc Result",i, docs);
+            forexProviderRates.push({ docs });
+            console.log("Doc Result", i, docs);
           })
           .catch((err) => {
             console.log("Cannot find fx-providers", err);
@@ -93,6 +104,7 @@ exports.getFxProviderFilterBuyRateDesc = (req, res, next) => {
 };
 
 exports.getFxProviderFilterSellRateDesc = (req, res, next) => {
+  console.log("Data", data);
   const from = req.params.currencyFrom;
   const to = req.params.currencyTo;
 
