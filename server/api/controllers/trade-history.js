@@ -1,4 +1,3 @@
-
 // TODO : To add middleware to check whether user is FX-provider or not
 const jwt = require("jsonwebtoken");
 //jwt token
@@ -19,10 +18,8 @@ exports.addTradeHistory = (req, res, next) => {
   });
 };
 
-
 exports.getAllTradeHistory = (req, res, next) => {
-  
-    TradeHistory.find()
+  TradeHistory.find()
     .exec()
     .then((docs) => {
       // console.log("All products", docs);
@@ -34,12 +31,11 @@ exports.getAllTradeHistory = (req, res, next) => {
         error: err,
       });
     });
-
 };
 
 exports.getCustomerTradeHistory = (req, res, next) => {
-    const customerId = req.params.customerId;
-    TradeHistory.find({customer_id : customerId})
+  const customerId = req.params.customerId;
+  TradeHistory.find({ customer_id: customerId })
     .exec()
     .then((docs) => {
       // console.log("All products", docs);
@@ -51,12 +47,11 @@ exports.getCustomerTradeHistory = (req, res, next) => {
         error: err,
       });
     });
-
 };
 
 exports.getFxTradeHistory = (req, res, next) => {
-    const fxId = req.params.fxId;
-    TradeHistory.find({fx_provider_id : fxId})
+  const fxId = req.params.fxId;
+  TradeHistory.find({ fx_provider_id: fxId })
     .exec()
     .then((docs) => {
       // console.log("All products", docs);
@@ -68,5 +63,43 @@ exports.getFxTradeHistory = (req, res, next) => {
         error: err,
       });
     });
+};
 
+exports.getRecentCustTradeHistory = (req, res, next) => {
+  const customerId = req.params.customerId;
+  const mysort = { tradingTimestamp: -1 };
+  TradeHistory.find({ customer_id: customerId })
+    .sort(mysort)
+    .limit(5)
+    .exec()
+    .then((docs) => {
+      // console.log("All products", docs);
+      res.status(200).json(docs);
+    })
+    .catch((err) => {
+      console.log("Error: Cannot fetch trade history", err);
+      res.status(500).json({
+        error: err,
+      });
+    });
+};
+
+exports.getRecentFxTradeHistory = (req, res, next) => {
+  const fxId = req.params.fxId;
+  const mysort = { tradingTimestamp: -1 };
+  
+  TradeHistory.find({ fx_provider_id: fxId })
+    .sort(mysort)
+    .limit(5)
+    .exec()
+    .then((docs) => {
+      // console.log("All products", docs);
+      res.status(200).json(docs);
+    })
+    .catch((err) => {
+      console.log("Error: Cannot fetch trade history", err);
+      res.status(500).json({
+        error: err,
+      });
+    });
 };
