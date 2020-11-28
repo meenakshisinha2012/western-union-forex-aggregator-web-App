@@ -5,6 +5,7 @@ const FxProvider = require("../../models/fx-provider");
 
 exports.fx_signup = (req, res, next) => {
   const fxProvider = new FxProvider(req.body);
+  
   fxProvider.save((err, fxProvider) => {
     if (err) {
       return res.status(400).json({

@@ -18,7 +18,7 @@ const identificationNoList = require("../models/identification-no-list");
 // };
 
 exports.isValidFXProvider = (req, res, next) => {
-  const id = req.params.IdNo;
+  const id = req.body.fx_identification_no;
 
   identificationNoList
     .find({ _id: id })
@@ -27,7 +27,7 @@ exports.isValidFXProvider = (req, res, next) => {
       next();
     })
     .catch((err) => {
-      res.status(403).json({error: "You are not a valid Forex-Provider.",err});
+      res.status(403).json({errormsg: "You are not a valid Forex-Provider.",err});
     });
 };
 
